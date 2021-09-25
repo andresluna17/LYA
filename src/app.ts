@@ -1,6 +1,7 @@
 import express, { Application } from "express";
 import morgan from "morgan";
 import { auth } from "./modules/auth/router";
+import { message } from "./modules/message/router";
 import { users } from "./modules/users/router";
 
 export const createApp = () => {
@@ -10,6 +11,7 @@ export const createApp = () => {
 
   app.use("/users", users);
   app.use("/authorization", auth);
+  app.use("/message", message);
 
   return app;
 };
