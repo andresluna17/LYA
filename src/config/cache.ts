@@ -4,6 +4,6 @@ const { REDIS_PORT = 6379, REDIS_HOST = "localhost", REDIS_PASSWORD = "" } = pro
 
 export const REDIS_OPTIONS: ClientOpts = {
   port: +REDIS_PORT,
-  host: REDIS_HOST,
-  password: REDIS_PASSWORD
+  host: REDIS_HOST
+  //   password: REDIS_PASSWORD
 };

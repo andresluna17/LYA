@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "05313d10-8338-441c-b586-d6b734916fa2",
+		"name": "Prueba lya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test3@gmail.com\",\r\n    \"password\": \"test\",\r\n    \"name\": \"prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test3@gmail.com\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/authorization",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTRlNTE3ZmVhNjQxOTU0ZGZjOGM1MmEiLCJpYXQiOjE2MzI1MjI2MjcsImV4cCI6MTYzMjUyNjIyN30.OjABcHbHMdOmW4mXtNtzP_h6aqym7vZS5vGsbUx4V14",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/authorization",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTRlMzFkOWE0NTZkMTY1MmJkYmFkYjkiLCJpYXQiOjE2MzI1MjgwMjYsImV4cCI6MTYzMjUzMTYyNn0.M7epxtgeakO7m4oBif0iNUo6YuDw7LNiwtEFUMh3ieE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@gamil.com\",\r\n    \"name\":\"prueba actualizada 3\",\r\n    \"password\":\"prueba\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users/614e5304239f33bd71252c3e",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"614e5304239f33bd71252c3e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTRlMzFkOWE0NTZkMTY1MmJkYmFkYjkiLCJpYXQiOjE2MzI1MjgwMjYsImV4cCI6MTYzMjUzMTYyNn0.M7epxtgeakO7m4oBif0iNUo6YuDw7LNiwtEFUMh3ieE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/users/614e6cd69760e04c2c2977e1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"614e6cd69760e04c2c2977e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTRlMzFkOWE0NTZkMTY1MmJkYmFkYjkiLCJpYXQiOjE2MzI1MjgwMjYsImV4cCI6MTYzMjUzMTYyNn0.M7epxtgeakO7m4oBif0iNUo6YuDw7LNiwtEFUMh3ieE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/users/614e517fea641954dfc8c52a/active",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"614e517fea641954dfc8c52a",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTRlMzFkOWE0NTZkMTY1MmJkYmFkYjkiLCJpYXQiOjE2MzI1MjgwMjYsImV4cCI6MTYzMjUzMTYyNn0.M7epxtgeakO7m4oBif0iNUo6YuDw7LNiwtEFUMh3ieE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/users/614e5304239f33bd71252c3e",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"614e5304239f33bd71252c3e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MTRlMzFkOWE0NTZkMTY1MmJkYmFkYjkiLCJpYXQiOjE2MzI1ODkyOTMsImV4cCI6MTYzMjU5Mjg5M30.QwcG-Txx6I-zYdl1cLgsMM6skgSqngyVq4JO7R7GGHc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/message/send",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"message",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

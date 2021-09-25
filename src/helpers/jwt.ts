@@ -1,12 +1,6 @@
-import redis, { ClientOpts } from "redis";
+import redis from "redis";
 import JWTR from "jwt-redis";
-
-const { REDIS_PORT = 6379, REDIS_HOST = "localhost" } = process.env;
-
-export const REDIS_OPTIONS: ClientOpts = {
-  port: +REDIS_PORT,
-  host: REDIS_HOST
-};
+import { REDIS_OPTIONS } from "../config/cache";
 
 let redisClient = redis.createClient(REDIS_OPTIONS);
 let jwtr = new JWTR(redisClient);
