@@ -34,9 +34,7 @@ const userSchema = new Schema(
 );
 
 userSchema.pre<UserDocument>("save", async function () {
-  if (this.isModified("password")) {
-    this.password = await hash(this.password, 10);
-  }
+  this.password = await hash(this.password, 10);
 });
 
 userSchema.methods.matchesPassword = function (password: string) {
