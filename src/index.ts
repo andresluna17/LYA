@@ -1,3 +1,8 @@
+if (process.env.NODE_ENV !== "production") {
+  const dotenv = require("dotenv");
+  dotenv.config();
+}
+
 import mongoose from "mongoose";
 import { createApp } from "./app";
 import { MONGO_URI } from "./config/db";
